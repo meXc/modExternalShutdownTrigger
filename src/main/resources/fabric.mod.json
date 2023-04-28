@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "emptyshutdownflag",
+  "version": "${version}",
+  "name": "EmptyShutdownFlag",
+  "description": "When the server is empty after a while, it creates a while. Intended to be used as an external trigger for a shutdown.",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/EmptyShutdownFlag/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.github.mexc.java.minecraft.fabric.emptyshutdown.client.EmptyShutdownClient"
+    ],
+    "server": [
+      "com.github.mexc.java.minecraft.fabric.emptyshutdown.server.EmptyShutdownServer"
+    ],
+    "main": [
+      "com.github.mexc.java.minecraft.fabric.emptyshutdown.EmptyShutdown"
+    ]
+  },
+  "mixins": [
+    "EmptyShutdownFlag.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.19",
+    "fabric": "*",
+    "minecraft": "1.19.4"
+  }
+}
